@@ -1,0 +1,424 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+   * colors
+   */
+
+  /* /////////////////// */
+  --black-00: hsl(0, 0%, 14%);
+  --blue-00: hsl(190, 95%, 45%);
+  --blue-01: hsl(223, 48%, 52%);
+  --gray-00: hsl(0, 0%, 29%);
+  --gray-01: hsl(0, 0%, 91%);
+  --gray-02: hsl(0, 0%, 49%);
+  --green-00: hsl(165, 83%, 43%);
+  --red-00: hsl(0, 100%, 95%);
+  --red-01: hsl(353, 34%, 53%);
+  --red-02: hsl(6, 83%, 63%);
+  --white-00: hsl(0, 0%, 100%);
+  --yellow-00: hsl(38, 100%, 64%);
+  --yellow-01: hsl(57, 100%, 50%);
+  /**
+   * gradient color
+   */
+  --gradient: linear-gradient(to right, transparent 50%, var(--white_30) 100%);
+
+  /**
+   * typography
+   */
+  /* font-family */
+  --ff-poppins: "Roboto", sans-serif;
+  /* font-size */
+  --fs-8: 0.5rem;
+  --fs-9: 0.5625rem;
+  --fs-10: 0.625rem;
+  --fs-11: 0.6875rem;
+  --fs-12: 0.75rem;
+  /* font-weight */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+  --fw-b: bold;
+
+  /**
+   * spacing
+   */
+  --padding-6: 0.375rem;
+  --padding-8: 0.5rem;
+  --padding-12: 0.75rem;
+  --padding-13: 0.8125rem;
+  --padding-14: 0.875rem;
+  --pading-15: 0.9375rem;
+  --padding-16: 1rem;
+  --padding-20: 1.25rem;
+  --padding-320: 20rem;
+
+  --margin-8: 0.5rem;
+  --margin-15: 0.9375rem;
+  --margin-25: 1.5625rem;
+  --margin-35: 2.1875rem;
+  --margin-160: 9.975rem;
+  --margin-200: 12.5rem;
+  --margin-300: 18.75rem;
+  --width-20: 20px;
+  /**
+   * shadow
+   */
+  --shadow-1: 0 8px 16px var(--black_15);
+
+  /**
+   * radius
+   */
+
+  --radius-50: 50px;
+
+  /**
+   * transition
+   */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --transition-3: 1s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white-00);
+  color: var(--black-00);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-500);
+  line-height: 1.6;
+}
+html {
+  font-family: var(--ff-roboto);
+}
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+.alert {
+  background-color: var(--red-00);
+  color: var(--red-01);
+  padding-top: var(--padding-8);
+  padding-bottom: var(--padding-8);
+}
+.alert-text {
+  text-transform: uppercase;
+  font-size: var(--fs-12);
+  text-align: center;
+  font-weight: var(--fw-500);
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-20);
+  margin: 0 var(--margin-300);
+}
+
+.header-top-right-content {
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  font-size: var(--fs-12);
+  text-align: right;
+  margin-bottom: var(--margin-15);
+}
+.header-top-right-action {
+  display: flex;
+  float: right;
+  text-align: right;
+  text-transform: capitalize;
+  font-weight: var(--fw-400);
+}
+
+.header-top-right-action-item-middle,
+.header-top-right-action-item-end {
+  margin-left: var(--margin-8);
+}
+.action-item {
+  margin-left: var(--margin-8);
+  text-decoration: none;
+}
+
+.count-shopping-cart {
+  background-color: var(--red-00);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  /* line-height: 20px; */
+  text-align: center;
+  margin-left: var(--margin-8);
+}
+.menu-sticky {
+  background-color: var(--black-00);
+  position: relative;
+}
+.menu-container {
+  margin: 0 auto;
+  padding: 0 var(--padding-320);
+}
+
+.menu-container-list {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.menu-container-list-item {
+  margin-right: var(--margin-35);
+  padding-top: var(--padding-13);
+  padding-bottom: var(--padding-12);
+}
+.list-item-link {
+  color: white;
+  text-decoration: none;
+  font-weight: var(--fw-600);
+}
+.ribbon-sale {
+  background-color: var(--red-02);
+  /* height: 16.6px; */
+  /* width: 33.24px; */
+  bottom: 35px;
+  left: 72px;
+  /* margin: 50px; */
+  position: relative;
+  box-shadow: var(--shadow-1);
+}
+.ribbon-sale:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--red-02);
+  transform: rotate(45deg);
+}
+.text-ribbon {
+  position: absolute;
+  color: var(--white-00);
+  font-size: var(--fs-11);
+  font-weight: var(--fw-600);
+  text-transform: capitalize;
+  padding: 0 var(--padding-6);
+}
+.ribbon-new {
+  background-color: var(--blue-00);
+  /* height: 16.6px; */
+  /* width: 33.24px; */
+  bottom: 35px;
+  left: 25px;
+  /* margin: 50px; */
+  position: relative;
+  box-shadow: var(--shadow-1);
+}
+.ribbon-new:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--blue-00);
+  transform: rotate(45deg);
+}
+.ribbon-hot {
+  background-color: var(--yellow-00);
+  /* height: 16.6px; */
+  /* width: 33.24px; */
+  bottom: 35px;
+  left: 100px;
+  /* margin: 50px; */
+  position: relative;
+  box-shadow: var(--shadow-1);
+}
+.ribbon-hot:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--yellow-00);
+  transform: rotate(45deg);
+}
+/*-----------------------------------*\
+  #MOBILE NAVBAR
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #COLLECTION
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #SHOP
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #BANNER
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #FEATURE
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #OFFER
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #BLOG
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 575px screen
+ */
+
+/**
+   * HEADER
+   */
+
+/**
+   * HERO
+   */
+
+/**
+   * BANNER
+   */
+
+/**
+   * OFFER
+   */
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+/**
+   * CUSTOM PROPERTY
+   */
+
+/**
+     * typography
+     */
+
+/**
+   * REUSED STYLE
+   */
+
+/**
+   * COLLECTION
+   */
+
+/**
+   * BANNER
+   */
+
+/**
+   * OFFER
+   */
+
+/**
+   * FOOTER
+   */
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+/**
+   * CUSTOM PROPERTY
+   */
+
+/**
+     * spacing
+     */
+
+/**
+   * REUSED STYLE
+   */
+
+/**
+   * COLLECTION
+   */
+
+/**
+   * BANNER
+   */
+
+/**
+   * OFFER
+   */
+
+/**
+   * FOOTER
+   */
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+/**
+   * REUSED STYLE
+   */
+
+/**
+   * HEADER
+   */
+
+/**
+   * HERO
+   */
+
+/**
+   * BANNER
+   */
+
+/**
+   * FEATURE
+   */
+
+/**
+   * OFFER
+   */
