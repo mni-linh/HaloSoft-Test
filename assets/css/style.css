@@ -114,6 +114,11 @@ body {
 html {
   font-family: var(--ff-roboto);
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -467,7 +472,7 @@ html {
   font-weight: 700;
   letter-spacing: 0.05rem;
 }
-.content-wrapper a:before {
+/* .content-wrapper a:before {
   content: "";
   position: absolute;
   bottom: 12px;
@@ -480,11 +485,32 @@ html {
 .content-wrapper a:hover:before {
   width: 80%;
   align-content: center;
-}
+} */
 /*-----------------------------------*\
   #COLLECTION
 \*-----------------------------------*/
-
+.container-collection {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.collections-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  column-gap: 1rem; /*
+   */
+}
+.collections-title:before,
+.collections-title:after {
+  content: "";
+  height: 2px;
+  background-color: #000;
+  display: block;
+}
 /*-----------------------------------*\
   #SHOP
 \*-----------------------------------*/
