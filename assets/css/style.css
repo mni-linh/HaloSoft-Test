@@ -1117,7 +1117,30 @@ a.social-network {
 /**
    * HEADER
    */
+.tl-menu-sticky {
+  display: none;
+}
 
+@media (max-width: 1024px) {
+  .header-top,
+  .menu-sticky {
+    display: none;
+  }
+  .tl-menu-sticky {
+    display: block;
+    height: 50px;
+    background-color: white;
+  }
+  .tl-menu-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  .tl-menu-togle {
+    color: black;
+    font-size: 30px;
+  }
+}
 /**
    * HERO
    */
