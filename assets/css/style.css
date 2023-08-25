@@ -186,6 +186,9 @@ body {
 .menu-container {
   margin: 0 auto;
   padding: 0 var(--padding-320);
+  height: 45px;
+  display: flex;
+  align-items: center;
 }
 
 .menu-container-list {
@@ -198,19 +201,27 @@ body {
 
 .menu-container-list-item {
   margin-right: var(--margin-35);
-  padding-top: var(--padding-13);
-  padding-bottom: var(--padding-12);
+  /* padding-top: var(--padding-13); */
+  /* padding-bottom: var(--padding-12); */
 }
 .list-item-link {
   color: white;
   text-decoration: none;
   font-weight: var(--fw-600);
 }
+.text-have-label {
+  position: relative;
+}
+.text-new-label {
+  position: absolute;
+  top: 15px;
+  left: 4px;
+}
 .ribbon-sale {
   background-color: var(--red-02);
   height: 16.6px;
   width: 33.24px;
-  bottom: 35px;
+  bottom: 40px;
   left: 72px;
   /* margin: 50px; */
   position: relative;
@@ -232,14 +243,18 @@ body {
   font-size: var(--fs-11);
   font-weight: var(--fw-600);
   text-transform: capitalize;
-  padding: 0 var(--padding-6);
+  /* padding: 2px 0px 0px 7px; */
+  /* bottom: -8px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .ribbon-new {
   background-color: var(--blue-00);
   height: 16.6px;
   width: 33.24px;
-  bottom: 35px;
-  left: 25px;
+  bottom: 40px;
+  left: 20px;
   /* margin: 50px; */
   position: relative;
   box-shadow: var(--shadow-1);
@@ -248,7 +263,7 @@ body {
   content: "";
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 13px;
   width: 8px;
   height: 8px;
   background-color: var(--blue-00);
@@ -258,17 +273,19 @@ body {
   background-color: var(--yellow-00);
   height: 16.6px;
   width: 33.24px;
-  bottom: 35px;
-  left: 100px;
+  bottom: 43px;
+  left: 95px;
   /* margin: 50px; */
   position: relative;
   box-shadow: var(--shadow-1);
+  display: inline-block;
+  justify-content: center;
 }
 .ribbon-hot:before {
   content: "";
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 13px;
   width: 8px;
   height: 8px;
   background-color: var(--yellow-00);
@@ -433,7 +450,10 @@ body {
   /* width: 100%; */
   /* margin: 0; */
   padding: 0 15px;
-  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -461,7 +481,6 @@ body {
 .content-wrapper a {
   position: absolute;
   text-decoration: none;
-  color: #a0a0a0;
   letter-spacing: 0.5px;
   padding: 8px;
   top: 50%;
@@ -748,7 +767,7 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .button-show-more button:hover {
   background-color: black;
@@ -761,7 +780,7 @@ body {
   #SHOP
 \*-----------------------------------*/
 .post-with-instagram {
-  height: 65vh;
+  height: 73vh;
   background-color: var(--gray-01);
   padding: 50px 0 70px 0;
   display: block;
@@ -769,6 +788,7 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .title-instagram {
   text-align: center;
   text-transform: uppercase;
@@ -789,7 +809,8 @@ i.fa-brands.fa-instagram {
   #BANNER
 \*-----------------------------------*/
 .gallery {
-  width: 900px;
+  width: 100%;
+  max-width: 1170px;
   display: flex;
   overflow-x: scroll;
 }
@@ -901,6 +922,7 @@ a .previous,
 \*-----------------------------------*/
 .footer-container {
   background-color: #232323;
+  /* margin-top: 70px; */
   padding: 40px 150px;
 }
 .footer-top {
@@ -917,10 +939,38 @@ ul {
   list-style-type: none;
   line-height: 25pt;
 }
-a {
+/* xxxxx */
+.menu-container-list .menu-container-list-item a {
+  position: relative;
+}
+.menu-container-list .menu-container-list-item a:hover {
+  color: white;
+}
+
+/* xxxxx */
+/* /////////// */
+.mini-item a {
   text-decoration: none;
   color: gray;
+  position: relative;
 }
+.mini-item a:hover {
+  color: white;
+}
+a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 1px;
+  width: 0;
+  background: white;
+  /* border-radius: 50px; */
+  transition: width 0.3s ease;
+}
+a:hover:before {
+  width: 100%;
+}
+/* ////////////// */
 p.title-item {
   text-transform: uppercase;
   margin: 0 0 10px 0;
@@ -963,6 +1013,9 @@ input.email-input:focus {
   display: flex;
   margin: 20px 0;
   font-size: 12px;
+}
+.item-social-network a {
+  text-decoration: none;
 }
 a.social-network {
   display: flex;
