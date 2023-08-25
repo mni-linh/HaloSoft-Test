@@ -26,3 +26,11 @@ nextBtn.addEventListener("click", () => {
   scrollContainer.style.scrollBehavior = "smooth";
   scrollContainer.scrollLeft += 900;
 });
+//
+let scrollCollect = document.querySelector(".gallery");
+
+scrollCollect.addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  scrollCollect.scrollLeft += evt.deltaY;
+  scrollCollect.style.scrollBehavior = "auto";
+});
